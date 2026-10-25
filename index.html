@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{margin:0}img{max-width:100%}</style>
+<title>Hank 影像工作室｜短影音剪輯・AI 影片・3D 商品動畫・字幕翻譯</title>
+<meta name="description" content="新北接案工作室：短影音剪輯、AI 短影音代製、YouTube 長片剪輯、3D 商品渲染動畫、尾牙開場影片、字幕逐字稿翻譯。可先做樣片，IG @hanksmarket1214、LINE 0920441786。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&display=swap">
+<style>
+/* 版型：左側大標＋右側服務清單的雙欄，像剪輯軟體的時間軸軌道；手機改單欄 */
+:root{
+  --bg:#f3f1ee; --panel:#ffffff; --ink:#1d1b22; --muted:#6b6774; --line:#dedad4;
+  --accent:#e2462f; --accent-ink:#ffffff; --track:#2b2833;
+  --display:"Bricolage Grotesque","Noto Sans TC",system-ui,sans-serif;
+  --body:"Noto Sans TC",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#16151a; --panel:#1f1d24; --ink:#f1eef5; --muted:#a39fae; --line:#33303b;
+  --accent:#ff6a50; --accent-ink:#16151a; --track:#d9d4e2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#16151a; --panel:#1f1d24; --ink:#f1eef5; --muted:#a39fae; --line:#33303b;
+  --accent:#ff6a50; --accent-ink:#16151a; --track:#d9d4e2; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7}
+.wrap{max-width:1080px;margin:0 auto;padding-block:48px 64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:36px}
+.eyebrow{font-size:13px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;font-weight:500}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:10px 0 0;text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{color:var(--muted);margin:0;max-width:34em}
+.tc{display:flex;gap:6px;margin-top:22px;font-variant-numeric:tabular-nums;font-size:12px;color:var(--muted);font-family:var(--display)}
+.tc span{border:1px solid var(--line);padding:2px 8px;border-radius:3px}
+h2{font-family:var(--display);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:48px 0 14px}
+.services{display:grid;gap:0;border-top:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.svc .code{font-family:var(--display);font-weight:800;color:var(--accent);font-size:14px}
+.svc h3{margin:0;font-size:20px;font-weight:700;text-wrap:balance}
+.svc p{margin:4px 0 0;color:var(--muted);font-size:15px;min-width:0}
+.svc .price{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap;font-size:15px}
+.svc .price small{display:block;font-weight:400;color:var(--muted);font-size:12px;text-align:right}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{background:var(--panel);border:1px solid var(--line);padding:18px;border-radius:6px}
+.step b{display:block;font-size:15px;margin-bottom:4px}
+.step span{color:var(--muted);font-size:14px}
+.contact{margin-top:56px;background:var(--track);color:var(--bg);border-radius:10px;padding:32px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.contact h3{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:0;line-height:1.15;text-wrap:balance}
+.contact p{margin:8px 0 0;opacity:.75;font-size:15px}
+.chips{display:grid;gap:10px;min-width:0}
+.chip{display:flex;justify-content:space-between;gap:14px;align-items:center;background:var(--bg);color:var(--ink);border-radius:6px;padding:12px 14px;font-size:15px}
+.chip code{font-family:var(--display);font-weight:800;font-size:17px;user-select:all;font-variant-numeric:tabular-nums}
+.chip a{color:var(--ink);font-weight:700;text-decoration:none}
+.btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:4px;padding:6px 10px;font:600 13px var(--body);cursor:pointer}
+.btn:focus-visible,.chip a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.note{font-size:13px;color:var(--muted);margin-top:28px}
+@media (max-width:760px){
+  header{grid-template-columns:1fr;gap:18px}
+  .how{grid-template-columns:1fr 1fr}
+  .contact{grid-template-columns:1fr;padding:24px}
+  .svc{grid-template-columns:44px 1fr}
+  .svc .price{grid-column:2}
+  .svc .price small{text-align:left}
+}
+@media (prefers-reduced-motion:no-preference){.btn{transition:transform .15s}.btn:active{transform:scale(.96)}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">Hank Studio · 台灣新北</div>
+      <h1>影片、AI 與 3D，<em>一個人做到好</em></h1>
+    </div>
+    <div>
+      <p class="lede">短影音剪輯、AI 影片、3D 商品動畫、字幕翻譯。自有 RTX 5080 工作站，出片快，每個案子都可以先做小樣片給你看風格，滿意再開始。</p>
+      <div class="tc" aria-hidden="true"><span>00:00:15</span><span>9:16</span><span>4K</span><span>24fps</span></div>
+    </div>
+  </header>
+
+  <h2>服務項目</h2>
+  <div class="services">
+    <div class="svc"><span class="code">V1</span><div><h3>短影音剪輯</h3><p>Reels／Shorts／TikTok。剪節奏、上字幕、做封面和開頭 Hook，素材手機拍就可以。</p></div><div class="price">NT$800 起<small>每支 15–60 秒</small></div></div>
+    <div class="svc"><span class="code">V2</span><div><h3>AI 短影音代製</h3><p>不想露臉也能經營帳號：腳本、AI 畫面、配音、字幕全包，適合知識、品牌、商品介紹。</p></div><div class="price">NT$1,500 起<small>每支</small></div></div>
+    <div class="svc"><span class="code">V3</span><div><h3>長影片剪輯</h3><p>YouTube Vlog、課程、訪談、活動紀錄。整理素材、剪重點、全程字幕、配樂。</p></div><div class="price">NT$2,500 起<small>成品 15–20 分鐘</small></div></div>
+    <div class="svc"><span class="code">3D</span><div><h3>3D 商品渲染與動畫</h3><p>香水、保養品、飲料罐、包裝盒。寫實渲染圖、360° 旋轉影片、廣告動畫，不用寄實品。</p></div><div class="price">NT$2,500 起<small>主圖一張</small></div></div>
+    <div class="svc"><span class="code">EV</span><div><h3>尾牙／活動開場影片</h3><p>照片做成動態、字卡動畫、跟著音樂節拍剪，適合大螢幕投影。</p></div><div class="price">NT$2,500 起<small>約 3 分鐘</small></div></div>
+    <div class="svc"><span class="code">TX</span><div><h3>字幕、逐字稿、翻譯</h3><p>影片字幕（SRT）、會議與訪談逐字稿、中英日翻譯，AI 初稿加人工校對。</p></div><div class="price">NT$500 起<small>每小時影音</small></div></div>
+    <div class="svc"><span class="code">AI</span><div><h3>AI 商品情境圖</h3><p>一張商品照，生成多種情境、換背景、做電商主圖和社群圖。</p></div><div class="price">NT$1,000 起<small>每組 5 張</small></div></div>
+  </div>
+
+  <h2>合作流程</h2>
+  <div class="how">
+    <div class="step"><b>聊需求</b><span>IG 或 LINE 傳訊息，說明用途、長度、交期。</span></div>
+    <div class="step"><b>報價＋樣片</b><span>給你明確報價，先做一小段樣片確認風格。</span></div>
+    <div class="step"><b>製作與修改</b><span>依約定次數修改，通常 2–3 次。</span></div>
+    <div class="step"><b>確認付款交件</b><span>看過預覽確認後付款，交付完整檔案。</span></div>
+  </div>
+
+  <section class="contact" aria-labelledby="ct">
+    <div>
+      <h3 id="ct">傳訊息給我，最快當天回覆</h3>
+      <p>作品集在 IG。報價免費，先看樣片再決定。</p>
+    </div>
+    <div class="chips">
+      <div class="chip"><span>Instagram</span><a href="https://www.instagram.com/hanksmarket1214/" target="_blank" rel="noopener">@hanksmarket1214 →</a></div>
+      <div class="chip"><span>Threads</span><a href="https://www.threads.com/@hanksmarket1214" target="_blank" rel="noopener">@hanksmarket1214 →</a></div>
+      <div class="chip"><span>LINE ID</span><span style="display:flex;gap:10px;align-items:center"><code id="line">0920441786</code><button class="btn" id="copy" type="button">複製</button></span></div>
+    </div>
+  </section>
+  <p class="note">價格為起價，實際依長度、素材與交期報價。AI 生成的畫面會依平台規定標示。</p>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var b=this,t=document.getElementById('line').textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('line'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='已選取，請複製'}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){b.textContent='已複製'},sel)}else{sel()}
+});
+</script>
+
+</body>
+</html>
